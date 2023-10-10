@@ -1,0 +1,88 @@
+body {
+    background-color: #F6FDFF;
+    margin: 0;
+    /* uses flex to maintain vertical and horizontal centering of container */
+    display: flex;
+    /* center horizontally */
+    align-items: center;
+    /* center vertically */
+    justify-content: center;
+    /* must specify height for vertical centering to work */
+    height: 100vh;
+}
+
+#master {
+    /* fix dimensions of master */
+    width: 700px;
+    height: 600px;
+    background-color: #F7F0EA;
+    /* add drop shadow */
+    filter: drop-shadow(5px 5px 10px #82848C);
+}
+
+#days-container {
+    /* use flex to arrange days as a row */
+    display: flex;
+}
+
+.day {
+    /* constrain dimensions of each day to match overall width and height */
+    width: 100px;
+    height: 100px;
+}
+
+.button:hover {
+    /* changes day colour on rollover (mouse hover) */
+    background-color: #E2C2AE;
+}
+
+.button:active {
+    /* changes day colour on selection */
+    background-color: #C48D80;
+}
+
+h4 {
+    /* style all h4 text elements */
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #000;
+    /* center text horizontally */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#city-text {
+    /* match the line height to fond size for better control of positioning */
+    font-size: 32px;
+    line-height: 40px;
+    /* position the city text (norwich) using specific offset values */
+    position: absolute;
+    left: 10px;
+    bottom: 15px;
+    margin: 0;
+    color: #F6FDFF;
+    opacity: 58%;
+}
+
+#hero-container {
+    /* the parent of an absolutely positioned element must be relative */
+    position: relative;
+    width: 600px;
+    height: 500px;
+}
+#hero-image{
+    /* prevent the image from distorting when scaling */
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+}
+.weather-icon {
+    width: 40px;
+    height: 40px;
+    /* these 3 lines of code centre the icon horizontally - alternative technique to flex */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
