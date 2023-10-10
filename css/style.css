@@ -63,7 +63,8 @@ h4 {
     bottom: 15px;
     margin: 0;
     color: #F6FDFF;
-    opacity: 58%;
+    /* can also do rgba(100% 100% 100% 0.5%) */
+    opacity: 75%;
 }
 
 #hero-container {
